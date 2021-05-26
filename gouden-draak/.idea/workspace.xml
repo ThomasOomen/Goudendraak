@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6daf2ca4-86fd-4460-ac98-2861b2ff6610" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_05_24_171838_create_product_types_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_05_26_134134_create_products_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/ProductSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/ProductTypeSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621870063679</updated>
       <workItem from="1621870064806" duration="63000" />
-      <workItem from="1622035531063" duration="2604000" />
+      <workItem from="1622035531063" duration="3412000" />
     </task>
     <servers />
   </component>

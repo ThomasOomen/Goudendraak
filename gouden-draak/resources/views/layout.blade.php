@@ -60,7 +60,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
-                            <a class="dropdown-item" href="#">Log out</a>
+                            <a class="dropdown-item" href="{{ url('/logout') }}">Log out</a>
                         </div>
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
