@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware(['auth'])
+    ->name('dashboard');
+Route::get('/dashboard/product-create', [DashboardController::class, 'product_create'])
+    ->middleware(['auth']);
+Route::post('/dashboard/product-store', [DashboardController::class, 'product_store'])
+    ->middleware(['auth']);
+Route::get('/dashboard/product-edit/{id}', [DashboardController::class, 'product_edit'])
+    ->middleware(['auth']);
+Route::post('/dashboard/product-update', [DashboardController::class, 'product_update'])
+    ->middleware(['auth']);
+Route::get('/dashboard/product-delete/{id}', [DashboardController::class, 'product_destroy'])
+    ->middleware(['auth']);
 
 require __DIR__.'/auth.php';
