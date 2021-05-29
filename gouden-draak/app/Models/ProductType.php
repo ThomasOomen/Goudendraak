@@ -15,4 +15,8 @@ class ProductType extends Model
      * @var string
      */
     protected $table = 'product_types';
+
+    public function products() {
+        return $this->hasMany(Product::class,"productType_id");
+    }
 }

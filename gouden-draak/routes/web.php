@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,5 +32,7 @@ Route::post('/dashboard/product-update', [DashboardController::class, 'product_u
     ->middleware(['auth']);
 Route::get('/dashboard/product-delete/{id}', [DashboardController::class, 'product_destroy'])
     ->middleware(['auth']);
+
+Route::get('/menu-card', [HomeController::class, 'show']);
 
 require __DIR__.'/auth.php';
