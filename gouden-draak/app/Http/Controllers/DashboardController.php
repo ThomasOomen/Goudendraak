@@ -23,7 +23,6 @@ class DashboardController extends Controller
     public function product_store(Request $request) {
         $onTheMenu = $this->get_if_on_menu_from_request($request->on_the_menu);
 
-        // Validate the request...
         $request->validate([
             'name' => 'required',
             'price' => 'required|regex:/^\d+(\.\d{1,2})?$/',
@@ -52,7 +51,6 @@ class DashboardController extends Controller
     public function product_update(Request $request) {
         $onTheMenu = $this->get_if_on_menu_from_request($request->on_the_menu);
 
-        // Validate the request...
         $request->validate([
             'name' => 'required',
             'price' => 'required|regex:/^\d+(\.\d{1,2})?$/',
