@@ -1887,8 +1887,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["title", "menu"],
+  props: ["menu"],
   data: function data() {
     return {};
   },
@@ -37570,16 +37594,64 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container pt-4" }, [
+    _c("h4", { staticClass: "text-center" }, [
+      _c("b", [_vm._v(_vm._s(_vm.menu[0].product_type.name))])
+    ]),
+    _vm._v(" "),
+    _c(
+      "table",
+      { staticClass: "table table-borderless border-top border-secondary" },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "tbody",
+          _vm._l(_vm.menu, function(item) {
+            return _c("tr", [
+              _c("th", { staticClass: "w-5", attrs: { scope: "row" } }, [
+                _vm._v(
+                  _vm._s(item.menu_item.menuNumber) +
+                    _vm._s(item.menu_item.menuNumberAddon)
+                )
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-50" }, [_vm._v(_vm._s(item.name))]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-25" }, [
+                item.description === null ? _c("div", [_vm._v("-")]) : _vm._e(),
+                _vm._v(" "),
+                item.description != null
+                  ? _c("div", [_vm._v(_vm._s(item.description))])
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "w-20" }, [
+                _vm._v("€ " + _vm._s(item.price))
+              ])
+            ])
+          }),
+          0
+        )
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _vm._v("\n    test\n    "),
-      _c("p", [_vm._v("Nog een test")])
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Gerecht")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Beschrijving")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Prijs")])
+      ])
     ])
   }
 ]

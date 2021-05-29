@@ -19,4 +19,7 @@ class Product extends Model
     public function productType() {
         return $this->belongsTo(ProductType::class,"productType_id");
     }
+    public function menuItem(){
+        return $this->hasOne(MenuItem::class);
+    }
 }

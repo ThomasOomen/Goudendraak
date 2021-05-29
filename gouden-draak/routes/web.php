@@ -35,4 +35,6 @@ Route::get('/dashboard/product-delete/{id}', [DashboardController::class, 'produ
 
 Route::get('/menu-card', [HomeController::class, 'show']);
 
+Route::get('/make-menu-pdf', [HomeController::class, 'makeMenuPDF']);
+
 require __DIR__.'/auth.php';
