@@ -43,18 +43,17 @@
 
         </thead>
         <tbody>
-{{--        TODO: add bargains--}}
-{{--        @foreach($activeBargains as $bargain)--}}
+        @foreach($activeBargains as $bargain)
 
-{{--            @foreach($bargain->products as $product)--}}
-{{--                <tr>--}}
-{{--                    <td class="w-40">{{$product->name}}</td>--}}
-{{--                    <td class="w-20 pl-3">{{$bargain->startDate}}</td>--}}
-{{--                    <td class="w-20 pl-3">{{$bargain->endDate}}</td>--}}
-{{--                    <td class="w-20 pl-3">{{$product->pivot->price}} </td>--}}
-{{--                </tr>--}}
-{{--            @endforeach--}}
-{{--        @endforeach--}}
+            @foreach($bargain->products as $product)
+                <tr>
+                    <td class="w-40">{{$product->name}}</td>
+                    <td class="w-20 pl-3">{{$bargain->startDate}}</td>
+                    <td class="w-20 pl-3">{{$bargain->endDate}}</td>
+                    <td class="w-20 pl-3">{{$product->pivot->price}} </td>
+                </tr>
+            @endforeach
+        @endforeach
         </tbody>
     </table>
 </div>

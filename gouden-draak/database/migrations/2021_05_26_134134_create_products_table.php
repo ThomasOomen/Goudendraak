@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->foreignId('productType_id')
                 ->constrained('product_types')
                 ->onUpdate('cascade')
-                ->onDelete('cascade');;
+                ->onDelete('cascade');
             $table->mediumText('description')->nullable();
             $table->boolean('onTheMenu')->default(true);
             $table->timestamps();

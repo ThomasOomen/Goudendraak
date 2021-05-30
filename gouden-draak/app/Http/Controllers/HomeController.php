@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bargain;
 use App\Models\ProductType;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use PDF;
 
@@ -20,7 +22,14 @@ class HomeController extends Controller
                     $product->menuItem;
                     $product->productType;
 
-                    // TODO: make extra page for bargains
+                    $bargains = $product->bargains;
+                    if(!empty($bargains)){
+                        foreach($bargains as $bargain){
+                            if($bargain->endDate > Carbon::now() && $bargain->startDate <= Carbon::now()){
+                                $product->price = $bargain->pivot->price;
+                            }
+                        }
+                    }
                 }
             }
             $menuCategories[$product_type->name] = $category_products;
@@ -30,8 +39,7 @@ class HomeController extends Controller
 
     public function makeMenuPDF() {
         $menuCategories = Array();
-        // TODO: make Array of bargains
-        // $activeBargains = Array();
+        $activeBargains = Array();
         $product_types = ProductType::all();
 
         foreach ($product_types as $product_type) {
@@ -39,32 +47,29 @@ class HomeController extends Controller
                 $product->menuItem;
                 $product->productType;
 
-                // TODO add bargains
-//                $bargains = $product->bargains;
-//                if(!empty($bargains)){
-//                    foreach($bargains as $bargain){
-//                        if($bargain->endDate > Carbon::now() && $bargain->startDate <= Carbon::now()){
-//                            $product->price = $bargain->pivot->price;
-//                        }
-//                    }
-//                }
+                $bargains = $product->bargains;
+                if(!empty($bargains)){
+                    foreach($bargains as $bargain){
+                        if($bargain->endDate > Carbon::now() && $bargain->startDate <= Carbon::now()){
+                            $product->price = $bargain->pivot->price;
+                        }
+                    }
+                }
             }
             $menuCategories[$product_type->name] = $product_type->products;
         }
-        // TODO: fill bargain Array
-//        $bargains = Bargain::all();
-//        if(!empty($bargains)) {
-//            foreach ($bargains as $bargain) {
-//
-//                if ($bargain->endDate > Carbon::now() && $bargain->startDate <= Carbon::now()) {
-//                    $bargain->startDate = date('d-m-Y', strtotime($bargain->startDate));
-//                    $bargain->endDate = date('d-m-Y', strtotime($bargain->endDate));
-//                    array_push($activeBargains, $bargain);
-//                }
-//            }
-//        }
+        $bargains = Bargain::all();
+        if(!empty($bargains)) {
+            foreach ($bargains as $bargain) {
 
-        $pdf = PDF::loadview('menu_PDF', compact('menuCategories'));
+                if ($bargain->endDate > Carbon::now() && $bargain->startDate <= Carbon::now()) {
+                    $bargain->startDate = date('d-m-Y', strtotime($bargain->startDate));
+                    $bargain->endDate = date('d-m-Y', strtotime($bargain->endDate));
+                    array_push($activeBargains, $bargain);
+                }
+            }
+        }
+        $pdf = PDF::loadview('menu_PDF', compact('menuCategories', 'activeBargains'));
         return $pdf->download('Gouden-draak_menukaart.pdf');
     }
 }
