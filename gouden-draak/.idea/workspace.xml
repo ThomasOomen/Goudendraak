@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6daf2ca4-86fd-4460-ac98-2861b2ff6610" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Bargain.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_05_30_124416_create_bargains_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_05_30_125817_create_bargain_product_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/2020-03-24_1406.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_26_134134_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_26_134134_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_29_121651_create_menu_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_29_121651_create_menu_items_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/menu_PDF.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu_PDF.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +150,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../webfs/webfs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -178,7 +176,7 @@
       <workItem from="1621870064806" duration="63000" />
       <workItem from="1622035531063" duration="3412000" />
       <workItem from="1622277828997" duration="14197000" />
-      <workItem from="1622377877573" duration="1851000" />
+      <workItem from="1622377877573" duration="2740000" />
     </task>
     <servers />
   </component>

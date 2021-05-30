@@ -33,8 +33,10 @@ Route::post('/dashboard/product-update', [DashboardController::class, 'product_u
 Route::get('/dashboard/product-delete/{id}', [DashboardController::class, 'product_destroy'])
     ->middleware(['auth']);
 
-Route::get('/menu-card', [HomeController::class, 'show']);
-
+Route::get('/menu-card', [HomeController::class, 'showMenuCard']);
 Route::get('/make-menu-pdf', [HomeController::class, 'makeMenuPDF']);
+
+Route::get('/news', [HomeController::class, 'showNews']);
+Route::get('/contact', [HomeController::class, 'showContact']);
 
 require __DIR__.'/auth.php';

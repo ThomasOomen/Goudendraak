@@ -42,14 +42,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('menu-card') }}">Menukaart</a>
                 </li>
+{{--                <li class="nav-item">--}}
+{{--                    <a class="nav-link" href="#">Aanbiedingen</a>--}}
+{{--                </li>--}}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Aanbiedingen</a>
+                    <a class="nav-link" href="{{ url('news') }}">Nieuws</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nieuws</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="{{ url('contact') }}">Contact</a>
                 </li>
             </ul>
             @if (Route::has('login'))

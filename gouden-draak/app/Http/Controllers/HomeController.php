@@ -10,7 +10,7 @@ use PDF;
 
 class HomeController extends Controller
 {
-    public function show() {
+    public function showMenuCard() {
         $menuCategories = Array();
         $product_types = ProductType::all();
 
@@ -71,5 +71,13 @@ class HomeController extends Controller
         }
         $pdf = PDF::loadview('menu_PDF', compact('menuCategories', 'activeBargains'));
         return $pdf->download('Gouden-draak_menukaart.pdf');
+    }
+
+    public function showNews() {
+        return view('news');
+    }
+
+    public function showContact() {
+        return view('contact');
     }
 }
