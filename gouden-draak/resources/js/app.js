@@ -21,6 +21,7 @@ window.Vue = require('vue').default;
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('menu-table', require('./components/MenuTable.vue').default);
+Vue.component('order-table', require('./components/OrderTable.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

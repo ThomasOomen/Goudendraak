@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,12 +28,17 @@ Route::middleware('can:admin-role')->group(function () {
     Route::get('/dashboard/product-delete/{id}', [DashboardController::class, 'product_destroy']);
 });
 
-
+Route::middleware('can:kassa-role')->group(function () {
+    Route::get('/order-index', [OrderController::class, 'order_index']);
+});
 
 Route::get('/menu-card', [HomeController::class, 'showMenuCard']);
 Route::get('/make-menu-pdf', [HomeController::class, 'makeMenuPDF']);
 
 Route::get('/news', [HomeController::class, 'showNews']);
 Route::get('/contact', [HomeController::class, 'showContact']);
+
+Route::get('/order', [OrderController::class, 'order_create']);
+Route::post('/order-store', [OrderController::class, 'order_store']);
 
 require __DIR__.'/auth.php';

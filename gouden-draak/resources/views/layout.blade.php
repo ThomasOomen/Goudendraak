@@ -54,6 +54,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('contact') }}">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('order') }}">Bestellen in restaurant</a>
+                </li>
             </ul>
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -62,7 +65,12 @@
                             {{auth()->user()->name}}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                            @can('admin-role')
+                                <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                            @endcan
+                            @can('kassa-role')
+                                <a class="dropdown-item" href="{{ url('/order-index') }}">Bestelling overzicht</a>
+                            @endcan
                             <a class="dropdown-item" href="{{ url('/logout') }}">Log out</a>
                         </div>
                     @else
