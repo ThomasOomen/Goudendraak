@@ -20,6 +20,9 @@
         }
     </style>
 
+    <!-- Chinese red theme style -->
+    <link href="{{ asset('css/main-theme.css') }}" rel="stylesheet">
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -29,7 +32,7 @@
 <body class="antialiased">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="{{ url('/') }}">De gouden draak</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -74,6 +77,90 @@
         </div>
     </nav>
 
-    @yield('content')
+    <table class="theme-table">
+        <tr class="small-row"> <td colspan="9"></td></tr>
+        <tr class="medium-row">
+            <td class="small-col"></td>
+            <td class="medium-col left-border top-border yellow-border"></td>
+            <td class="medium-col right-border top-border yellow-border"></td>
+            <td class="medium-col right-border bottom-border yellow-border"></td>
+            <td class="top-border bottom-border yellow-border"></td>
+            <td class="medium-col left-border bottom-border yellow-border"></td>
+            <td class="medium-col left-border top-border yellow-border"></td>
+            <td class="medium-col right-border top-border yellow-border"></td>
+            <td class="small-col"></td>
+        </tr>
+        <tr class="medium-row">
+            <td class="small-col"></td>
+            <td class="medium-col left-border bottom-border yellow-border"></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td class="medium-col right-border bottom-border yellow-border"></td>
+            <td class="small-col"></td>
+        </tr>
+        <tr class="medium-row">
+            <td class="small-col"></td>
+            <td class="medium-col right-border bottom-border yellow-border"></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td class="medium-col"></td>
+            <td></td>
+            <td class="medium-col"></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td class="medium-col bottom-border yellow-border"></td>
+            <td class="small-col"></td>
+        </tr>
+        <tr class="big-row">
+            <td class="small-col"></td>
+            <td class="medium-col right-border left-border yellow-border"></td>
+            <td class="medium-col"></td>
+            <td class="medium-col"></td>
+            <td class="content-col">
+                @yield('content')
+            </td>
+            <td class="medium-col"></td>
+            <td class="medium-col"></td>
+            <td class="medium-col right-border left-border yellow-border"></td>
+            <td class="small-col"></td>
+        </tr>
+        <tr class="medium-row">
+            <td class="small-col"></td>
+            <td class="medium-col right-border top-border yellow-border"></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td class="medium-col"></td>
+            <td></td>
+            <td class="medium-col"></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td class="medium-col top-border yellow-border"></td>
+            <td class="small-col"></td>
+        </tr>
+        <tr class="medium-row">
+            <td class="small-col"></td>
+            <td class="medium-col left-border top-border yellow-border"></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td class="medium-col full-border yellow-border"></td>
+            <td class="medium-col right-border top-border yellow-border"></td>
+            <td class="small-col"></td>
+        </tr>
+        <tr class="medium-row">
+            <td class="small-col"></td>
+            <td class="medium-col left-border bottom-border yellow-border"></td>
+            <td class="medium-col right-border bottom-border yellow-border"></td>
+            <td class="medium-col right-border yellow-border"></td>
+            <td class="top-border bottom-border yellow-border"></td>
+            <td class="medium-col left-border yellow-border"></td>
+            <td class="medium-col left-border bottom-border yellow-border"></td>
+            <td class="medium-col right-border bottom-border yellow-border"></td>
+            <td class="small-col"></td>
+        </tr>
+        <tr class="small-row">
+            <td colspan="9"></td>
+        </tr>
+    </table>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="border border-dark container bg-Menu">
+    <div class="border border-dark container bg-Menu bg-white">
         <h3>De Gouden Draak is eenvoudig te vinden, vlak bij het centrum, 5 minuten lopen achter het centraal station.
             <br>
             <br>

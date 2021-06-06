@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6daf2ca4-86fd-4460-ac98-2861b2ff6610" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/2020-03-24_1406.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/main-theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menu_card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menu_card.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product_crud/product_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product_crud/product_create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product_crud/product_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product_crud/product_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +152,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../rik_joey/Webfs-goudendraak-OTAP-Development(1)/Webfs-goudendraak-OTAP-Development/GoudenDraak" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -177,6 +179,7 @@
       <workItem from="1622035531063" duration="3412000" />
       <workItem from="1622277828997" duration="14197000" />
       <workItem from="1622377877573" duration="2740000" />
+      <workItem from="1622978313191" duration="1049000" />
     </task>
     <servers />
   </component>
@@ -195,9 +198,9 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1622379104943" />
-    <state x="740" y="-805" key="FileChooserDialogImpl" timestamp="1622377993152">
+    <state x="740" y="-805" key="FileChooserDialogImpl" timestamp="1622978363117">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="740" y="-805" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1622377993152" />
+    <state x="740" y="-805" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1622978363117" />
   </component>
 </project>
