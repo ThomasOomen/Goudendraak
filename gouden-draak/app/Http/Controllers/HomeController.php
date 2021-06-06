@@ -6,10 +6,15 @@ use App\Models\Bargain;
 use App\Models\ProductType;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use PDF;
 
 class HomeController extends Controller
 {
+    public function showHomePage() {
+        return view('welcome');
+    }
+
     public function showMenuCard() {
         $menuCategories = Array();
         $product_types = ProductType::all();

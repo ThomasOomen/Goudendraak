@@ -19,6 +19,13 @@ class UserSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@gouden-draak.com',
             'password' => Hash::make('password'),
+            'role_id' => 1,
+        ]);
+        DB::table('users')->insert([
+            'name' => 'kassa',
+            'email' => 'kassa@gouden-draak.com',
+            'password' => Hash::make('password'),
+            'role_id' => 2,
         ]);
     }
 }
