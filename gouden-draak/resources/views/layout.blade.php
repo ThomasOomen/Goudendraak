@@ -70,6 +70,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @can('admin-role')
                                     <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                                    <a class="dropdown-item" href="{{ url('/employee-index') }}">Werknemers</a>
                                 @endcan
                                 @can('kassa-role')
                                     <a class="dropdown-item" href="{{ url('/order-index') }}">Bestelling overzicht</a>

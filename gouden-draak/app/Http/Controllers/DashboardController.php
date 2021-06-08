@@ -29,7 +29,6 @@ class DashboardController extends Controller
         ]);
 
         $product = new Product;
-
         $product->name = $request->name;
         $product->price = $request->price;
         $product->productType_id = $request->product_type;
@@ -57,7 +56,6 @@ class DashboardController extends Controller
         ]);
 
         $product = Product::find($request->id);
-
         $product->name = $request->name;
         $product->price = $request->price;
         $product->productType_id = $request->product_type;

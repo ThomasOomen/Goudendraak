@@ -3,6 +3,7 @@
 use App\Http\Controllers\BargainController;
 use App\Http\Controllers\CashierController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,13 @@ Route::middleware('can:admin-role')->group(function () {
     Route::get('/dashboard/product-edit/{id}', [DashboardController::class, 'product_edit']);
     Route::post('/dashboard/product-update', [DashboardController::class, 'product_update']);
     Route::get('/dashboard/product-delete/{id}', [DashboardController::class, 'product_destroy']);
+
+    Route::get('/employee-index', [EmployeeController::class, 'employee_index']);
+    Route::get('/employee-create', [EmployeeController::class, 'employee_create']);
+    Route::post('/employee-store', [EmployeeController::class, 'employee_store']);
+    Route::get('/employee-edit/{id}', [EmployeeController::class, 'employee_edit']);
+    Route::post('/employee-update', [EmployeeController::class, 'employee_update']);
+    Route::get('/employee-delete/{id}', [EmployeeController::class, 'employee_destroy']);
 });
 
 Route::middleware('can:kassa-role')->group(function () {
