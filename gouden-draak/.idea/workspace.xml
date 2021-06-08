@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6daf2ca4-86fd-4460-ac98-2861b2ff6610" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BargainController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Rules/DateOverlapRule.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/BargainTable.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/bargain_crud/bargain_create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/bargain_crud/bargain_index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/TakeawaySale.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_08_112614_create_takeaway_sales_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_06_08_112951_create_product_takeaway_sale_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/order_crud/order_takeaway_create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/order_crud/thank_for_takeaway.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/cashierMenuTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/CashierMenuTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -183,7 +182,7 @@
       <workItem from="1622377877573" duration="2740000" />
       <workItem from="1622978313191" duration="7237000" />
       <workItem from="1622987758053" duration="5126000" />
-      <workItem from="1623138112051" duration="6280000" />
+      <workItem from="1623138112051" duration="8256000" />
     </task>
     <servers />
   </component>
@@ -194,14 +193,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="682" y="-758" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1622291297720">
+    <state x="682" y="-758" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623151225896">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="682" y="-758" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1622291297720" />
-    <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623145321200">
+    <state x="682" y="-758" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1623151225896" />
+    <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1623151983205">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1623145321200" />
+    <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1623151983205" />
     <state x="740" y="-805" key="FileChooserDialogImpl" timestamp="1623139142374">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -214,9 +213,9 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="616" y="-299" key="run.anything.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1623145424300" />
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1623144253805">
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1623151975191">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1623144253805" />
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1623151975191" />
   </component>
 </project>

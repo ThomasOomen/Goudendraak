@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DinnerTable;
 use App\Models\Product;
 use App\Models\RestaurantSale;
+use App\Models\TakeawaySale;
 use App\Rules\TenMinutesOrderRule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -115,5 +116,68 @@ class OrderController extends Controller
         }
 
         return redirect(url('/'));
+    }
+
+    public function order_takeaway_create() {
+        $products = Product::where('onTheMenu', true)->get();
+        foreach($products as $product){
+            $bargains = $product->bargains;
+            if(!empty($bargains)){
+                foreach($bargains as $bargain){
+                    if($bargain->endDate > Carbon::now() && $bargain->startDate <= Carbon::now()){
+                        $product->price = $bargain->pivot->price;
+                    }
+                }
+            }
+        }
+        return view('order_crud/order_takeaway_create', ['products' => $products]);
+    }
+
+    public function order_takeaway_store(Request $request) {
+        $this->validate($request, [
+            'products.*' => 'required|numeric|distinct',
+            'quantity.*' => 'required|numeric|',
+            'name'=> 'required|max:255|min:2|'
+        ]);
+
+        $sale = new TakeawaySale;
+        $sale->saleDate = Carbon::now();
+        $sale->name = $request->name;
+
+
+        $products = $request->products;
+        $quantities = $request->quantity;
+
+        $totalprice = 0;
+        foreach($products as $key => $product){
+            $productObject = Product::find($product);
+            $bargains = $productObject->bargains;
+            foreach($bargains as $bargain){
+                if($bargain->startDate < Carbon::now() && $bargain->endDate > Carbon::now()){
+                    $productObject->price = $bargain->pivot->price;
+                }
+            }
+
+
+            $totalprice = $totalprice + ($productObject->price * $quantities[$key]);
+            $sale->price = $totalprice;
+            $sale->save();
+
+            $sale->products()->attach($product,['amount'=>$quantities[$key]]);
+        }
+
+        $qrStringName = "Naam: ".$sale->name."\n\r";
+        $qrStringProducts = "Gerechten:  \n\r";
+        foreach($sale->products as $product){
+            $qrStringProducts = $qrStringProducts . $product->menuItem->menuNumber . $product->menuItem->menuNumberAddon . " " . $product->name . " x" . $product->pivot->amount . "\n";
+        }
+        $qrStringProducts = $qrStringProducts . "\r";
+        $qrStringOrderNumber = "Bestelnummer: " . $sale->id;
+
+        $qrString = $qrStringName . $qrStringProducts . $qrStringOrderNumber;
+        $encodedQrString = urlencode($qrString);
+        $url = "https://api.qrserver.com/v1/create-qr-code/?data=" . $encodedQrString . "&size=500x500";
+
+        return view('order_crud/thank_for_takeaway', ['url' => $url]);
     }
 }

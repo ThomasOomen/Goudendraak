@@ -57,6 +57,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/order') }}">Bestellen in restaurant</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/order-takeaway') }}">Bestellen voor afhaal</a>
+                </li>
             </ul>
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">

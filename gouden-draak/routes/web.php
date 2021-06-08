@@ -51,4 +51,7 @@ Route::get('/order-repeat', [OrderController::class, 'order_repeat']);
 Route::get('/order-repeat-step-2/{id}', [OrderController::class, 'order_repeat_step_2']);
 Route::post('/order-repeat-store', [OrderController::class, 'order_repeat_store']);
 
+Route::get('/order-takeaway', [OrderController::class, 'order_takeaway_create']);
+Route::post('/order-takeaway-store', [OrderController::class, 'order_takeaway_store']);
+
 require __DIR__.'/auth.php';

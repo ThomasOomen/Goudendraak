@@ -31,4 +31,8 @@ class Product extends Model
     public function restaurantSale(){
         return $this->belongsToMany(RestaurantSale::class)->withPivot('amount');
     }
+
+    public function takeawaySale(){
+        return $this->belongsToMany(TakeawaySale::class)->withPivot('amount');
+    }
 }
