@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BargainController;
 use App\Http\Controllers\CashierController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
@@ -32,10 +33,14 @@ Route::middleware('can:admin-role')->group(function () {
 Route::middleware('can:kassa-role')->group(function () {
     Route::get('/order-index', [OrderController::class, 'order_index']);
     Route::get('/find-product', [CashierController::class, 'cashierMenu_index']);
+    Route::get('/bargain-create', [BargainController::class, 'bargain_create']);
+    Route::post('/bargain-store', [BargainController::class, 'bargain_store']);
 });
 
 Route::get('/menu-card', [HomeController::class, 'showMenuCard']);
 Route::get('/make-menu-pdf', [HomeController::class, 'makeMenuPDF']);
+
+Route::get('/bargain-index', [BargainController::class, 'bargain_index']);
 
 Route::get('/news', [HomeController::class, 'showNews']);
 Route::get('/contact', [HomeController::class, 'showContact']);

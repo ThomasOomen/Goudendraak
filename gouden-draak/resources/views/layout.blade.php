@@ -43,19 +43,19 @@
                     <a class="nav-link" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('menu-card') }}">Menukaart</a>
-                </li>
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link" href="#">Aanbiedingen</a>--}}
-{{--                </li>--}}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('news') }}">Nieuws</a>
+                    <a class="nav-link" href="{{ url('/menu-card') }}">Menukaart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('contact') }}">Contact</a>
+                    <a class="nav-link" href="{{ url('/bargain-index') }}">Aanbiedingen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('order') }}">Bestellen in restaurant</a>
+                    <a class="nav-link" href="{{ url('/news') }}">Nieuws</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/order') }}">Bestellen in restaurant</a>
                 </li>
             </ul>
             @if (Route::has('login'))
@@ -71,6 +71,7 @@
                             @can('kassa-role')
                                 <a class="dropdown-item" href="{{ url('/order-index') }}">Bestelling overzicht</a>
                                 <a class="dropdown-item" href="{{ url('/find-product') }}">Zoek product</a>
+                                <a class="dropdown-item" href="{{ url('/bargain-create') }}">Aanbiedingen</a>
                             @endcan
                             <a class="dropdown-item" href="{{ url('/logout') }}">Log out</a>
                         </div>
