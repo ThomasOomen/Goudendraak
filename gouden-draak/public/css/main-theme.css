@@ -1,3 +1,7 @@
+.antialiased {
+    background-color: red;
+}
+
 .theme-table {
     padding: 5px;
     width: 100%;
@@ -14,6 +18,10 @@
 
 .medium-row {
     height: 25px;
+}
+
+.dropdown-menu.show {
+    margin-left: 85%;
 }
 
 .big-row {
