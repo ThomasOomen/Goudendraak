@@ -3,7 +3,7 @@
 
 @section('content')
     <div id="app" class="container bg-white">
-{{--        <a class="btn btn-dark text-white" href="{{ route('RepeatOrder') }}">Herhaal een vorige bestelling</a>--}}
+        <a class="btn btn-dark text-white" href="{{ url('order-repeat') }}">Herhaal een vorige bestelling</a>
         @if($errors->any())
             {!! implode('', $errors->all('<div class="text-danger">:message</div>')) !!}
         @endif

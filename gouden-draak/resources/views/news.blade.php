@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="container">
+    <div id="app" class="container">
         <div class="bg-menu">
             <div class="card">
                 <div class="card-header bg-darkred text-yellow">Nieuwsbericht</div>

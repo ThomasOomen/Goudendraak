@@ -1,9 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="container">
-
-
+    <div id="app" class="container">
         <div class="card">
             <div class="card-header bg-darkred text-center">
                 <div class="d-flex flex-row justify-content-between">

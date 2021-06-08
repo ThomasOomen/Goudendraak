@@ -8,6 +8,7 @@ use App\Models\RestaurantSale;
 use App\Rules\TenMinutesOrderRule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Date;
 
 class OrderController extends Controller
 {
@@ -71,6 +72,48 @@ class OrderController extends Controller
 
             $sale->products()->attach($product,['amount'=>$quantities[$key]]);
         }
+        return redirect(url('/'));
+    }
+
+    public function order_repeat() {
+        $tables = DinnerTable::all();
+
+        return view('order_crud/order_repeat', ['tables' => $tables]);
+    }
+
+    public function order_repeat_step_2($id) {
+        $sales = RestaurantSale::where('dinner_table_id', $id)->get();
+        $todaySales = Array();
+        foreach($sales as $sale){
+            $date = new Date($sale->saleDate);
+            if($date != Carbon::now()->format('Ymd')){
+                array_push($todaySales,$sale);
+            }
+        }
+        return view('order_crud/order_repeat_2', ['sales' => $todaySales]);
+    }
+
+    public function order_repeat_store(Request $request) {
+        $this->validate($request, [
+            'tableId' => ['required','numeric',new TenMinutesOrderRule()],
+            'saleId' => ['required','numeric']
+        ]);
+
+        $saleId = $request->saleId;
+        $tableId = $request->tableId;
+
+        $copySale = RestaurantSale::find($saleId);
+        $newSale = new RestaurantSale;
+
+        $newSale->saleDate = Carbon::now();
+        $newSale->dinner_table_id = $tableId;
+        $newSale->price = $copySale->price;
+        $newSale->save();
+
+        foreach($copySale->products as $product){
+            $newSale->products()->attach($product, ['amount'=>$product->pivot->amount]);
+        }
+
         return redirect(url('/'));
     }
 }

@@ -40,5 +40,8 @@ Route::get('/contact', [HomeController::class, 'showContact']);
 
 Route::get('/order', [OrderController::class, 'order_create']);
 Route::post('/order-store', [OrderController::class, 'order_store']);
+Route::get('/order-repeat', [OrderController::class, 'order_repeat']);
+Route::get('/order-repeat-step-2/{id}', [OrderController::class, 'order_repeat_step_2']);
+Route::post('/order-repeat-store', [OrderController::class, 'order_repeat_store']);
 
 require __DIR__.'/auth.php';
