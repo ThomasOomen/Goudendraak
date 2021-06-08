@@ -50,7 +50,7 @@ class ProductSeeder extends Seeder
             'productType_id' => 1,
         ]);
         DB::table('products')->insert([
-            'name' => 'Soep Ling Fa',
+            'name' => 'Chinese Champignonsoep',
             'price' => 4.10,
             'productType_id' => 1,
         ]);

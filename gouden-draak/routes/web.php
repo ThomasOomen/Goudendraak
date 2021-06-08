@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CashierController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
@@ -30,6 +31,7 @@ Route::middleware('can:admin-role')->group(function () {
 
 Route::middleware('can:kassa-role')->group(function () {
     Route::get('/order-index', [OrderController::class, 'order_index']);
+    Route::get('/find-product', [CashierController::class, 'cashierMenu_index']);
 });
 
 Route::get('/menu-card', [HomeController::class, 'showMenuCard']);

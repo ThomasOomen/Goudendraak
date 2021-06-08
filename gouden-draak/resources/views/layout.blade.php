@@ -70,6 +70,7 @@
                             @endcan
                             @can('kassa-role')
                                 <a class="dropdown-item" href="{{ url('/order-index') }}">Bestelling overzicht</a>
+                                <a class="dropdown-item" href="{{ url('/find-product') }}">Zoek product</a>
                             @endcan
                             <a class="dropdown-item" href="{{ url('/logout') }}">Log out</a>
                         </div>
