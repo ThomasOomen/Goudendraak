@@ -3,7 +3,7 @@
 
 @section('content')
     <div id="app" class="container bg-white">
-        <a class="btn btn-dark text-white" href="{{ url('order-repeat') }}">Herhaal een vorige bestelling</a>
+        <a class="btn btn-dark text-white m-3" href="{{ url('order-repeat') }}">Herhaal een vorige bestelling</a>
         @if($errors->any())
             {!! implode('', $errors->all('<div class="text-danger">:message</div>')) !!}
         @endif
@@ -44,15 +44,13 @@
                             <td><label for="price1">Prijs </label>
                                 <h3 id="price1" class="pricetag align-text-center">€ {{$products[0]->price}}</h3>
                             </td>
-                            <td><button type="button" name="add" id="add" class="btn btn-dark">Extra product toevoegen</button></td>
                         </tr>
                     </table>
-
+                    <button type="button" name="add" id="add" class="btn btn-dark">Extra product toevoegen</button>
                     <div class="d-flex ">
                         <h2 id="totalPrice" class=" text-center pl-5"></h2>
                     </div>
                     <input type="submit" name="submit" id="submit" class="btn btn-dark ml-3 mb-3" value="Bestellen" />
-
                 </div>
             </form>
         </div>

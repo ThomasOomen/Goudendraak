@@ -3,13 +3,11 @@
 
 @section('content')
     <div id="app" class="container bg-white">
-        <h3 class="text-center">Bestellen voor takeaway</h3>
+        <h3 class="text-center p-3">Bestellen voor takeaway</h3>
         <div class="container">
             @if($errors->any())
                 {!! implode('', $errors->all('<div class="text-danger">:message</div>')) !!}
             @endif
-            <br />
-            <br />
             <div class="form-group">
                 <form method="POST" class="bg-menu mb-0" action="{{ url('order-takeaway-store') }}">
                     @csrf
@@ -38,9 +36,9 @@
                                 <td><label for="price1">Prijs </label>
                                     <h3 id="price1" class="pricetag align-text-center">€ {{$products[0]->price}}</h3>
                                 </td>
-                                <td><button type="button" name="add" id="add" class="btn btn-dark">Extra product toevoegen</button></td>
                             </tr>
                         </table>
+                        <button type="button" name="add" id="add" class="btn btn-dark">Extra product toevoegen</button>
                         <div class="d-flex ">
                             <h2 id="totalPrice" class=" text-center pl-5"></h2>
                         </div>

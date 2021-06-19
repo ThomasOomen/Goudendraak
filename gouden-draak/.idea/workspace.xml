@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6daf2ca4-86fd-4460-ac98-2861b2ff6610" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/employee_crud/employee_create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/employee_crud/employee_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/employee_crud/employee_index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/RoleSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/order_crud/order_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/order_crud/order_create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +147,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../rik_joey/Webfs-goudendraak-OTAP-Development(1)/Webfs-goudendraak-OTAP-Development/GoudenDraak" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -183,6 +177,10 @@
       <workItem from="1622978313191" duration="7237000" />
       <workItem from="1622987758053" duration="5126000" />
       <workItem from="1623138112051" duration="8256000" />
+      <workItem from="1623221512918" duration="1308000" />
+      <workItem from="1623223491613" duration="11000" />
+      <workItem from="1623917690190" duration="2073000" />
+      <workItem from="1624113585855" duration="3011000" />
     </task>
     <servers />
   </component>
@@ -201,10 +199,10 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1623151983205" />
-    <state x="740" y="-805" key="FileChooserDialogImpl" timestamp="1623139142374">
+    <state x="740" y="-805" key="FileChooserDialogImpl" timestamp="1623223253385">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="740" y="-805" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1623139142374" />
+    <state x="740" y="-805" key="FileChooserDialogImpl/0.0.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1623223253385" />
     <state x="540" y="-1080" width="1396" height="763" key="dock-window-1" timestamp="1622990377782">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
